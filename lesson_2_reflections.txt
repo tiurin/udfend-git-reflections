@@ -1,0 +1,12 @@
+Q: What happens when you initialize a repository? Why do you need to do it?
+
+A: When I run git init a directory .git is created.
+Any files present in the directory are not yet tracked by git. They need to be added manually.
+Initialization is needed to create a version control information storage so git can tell repository folder from regular folder.
+
+Q: How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+A: Staging area is a list of changes that are not yet under the version control but will be added with the next commit operation.
+A working directory rather contains all files in their current state regardless of whether they are to be changed or not or even if they are under version control or not.
+And a repository contains all versions of the working directory but without changes that are currently staged or untracked.
+Having a staging area helps to explicitly select what should be added to repository with the next commit rather than just adding all the changes introduced to files since last commit. This helps to make more meaningful commits.

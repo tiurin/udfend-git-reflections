@@ -1,0 +1,42 @@
+Q: How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+A: diff command shows only those parts that are different in two files which is very useful on large files like the game in the example. 
+It was even easier with git diff as it colorizes the output.
+
+Q: How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+A: I may easily see exact changes that introduced some functionality or bug, get back to the older version if needed, see changes timeline and authorship. 
+
+Q: What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google docs does?
+
+A: Manual creation gives more control over commit contents.
+When working with code it doesn't make much sense to save something which may not even compile.
+And what a developer wants is to save some meaningful state of an application.
+Fixing small typo, fix a bug or implement a new feature(which itself may consist of several features), all of them are too different to set up some automatic rules for saving them.
+This is definitely not a 'one-size-fits-all' situation.
+Manual saving requires some additional work but a developer may actually benefit from that. 
+
+Q: Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+A: Git is thought to work with program code.
+An application most often consists of several files rather than one.
+Often changes span across multiple files and are related, i.e. change in one file doesn't make sense without a change in another file and even could break the app.
+So it is reasonable to include them into one commit which will mark the state of an application at that point in time.
+
+Q: How can you use the commands git log and git diff to view the history of files?
+
+A: Git log gives a high-level overview of commits timeline.
+It includes some neat options like --stat, --oneline to control amount of info printed.
+Also log may be filtered by author, commit message pattern with --author --grep
+or by date with --since, --after.
+There are lots of other options available.
+
+Q: How might using version control make you more confident to make changes that could break something?
+
+A: I can always save a stable state and then create a branch from that state to experiment without a fear of loosing stable version.
+If experiment succeeds and code introduced proves to be useful I will merge that branch back to the main one.
+If not, I will just abandon (and probably delete) that branch and go back to the main one.
+
+Q: Now that you have your workspace set up, what do you want to try using Git for?
+
+A: Obviously, for any of my coding projects.

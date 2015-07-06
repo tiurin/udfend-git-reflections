@@ -10,3 +10,28 @@ A: Staging area is a list of changes that are not yet under the version control 
 A working directory rather contains all files in their current state regardless of whether they are to be changed or not or even if they are under version control or not.
 And a repository contains all versions of the working directory but without changes that are currently staged or untracked.
 Having a staging area helps to explicitly select what should be added to repository with the next commit rather than just adding all the changes introduced to files since last commit. This helps to make more meaningful commits.
+
+Q: How can you use the staging area to make sure you have one commit per logical change?
+
+A: This can be achieved with adding to staging area only those files that contain changes for particular logical change.
+If any files were staged by mistake they can be moved out of staging area with git reset command. 
+
+Q: What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+A: For example, when adding some experimental feature to play with in the free time without affecting the main workflow.
+When the feature is ready it can be merged to the master branch which wasn't blocked for other commits during the development of that feature.
+It is easy to switch back and forth between feature branch to develop a feature and master branch to make some hotfix to current production version of the application without applying feature changes.
+
+Q: How do the diagrams help you visualize the branch structure?
+
+A: Diagrams help to get an idea of what branch were started when and which of branches' commits are reachable one from another 
+
+Q: What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+A: All the commits from both branches now appear in a single branch and are reachable from the tip of current branch.
+
+Q: What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+A: Git is able to handle most of simple situations when code was edited in different places.
+However that will not always result in working code, because git is unaware of e.g. function name changes (one developer changed function name, but the other one being unaware of that change still used the old name in his new code).
+But in practice git's automatic merging is a real time saver.
